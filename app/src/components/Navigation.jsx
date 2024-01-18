@@ -1,7 +1,7 @@
 import styled from "styled-components";
 import Buttons from "./Buttons";
 
-function Navigation({ input }) {
+function Navigation({ input, btn }) {
   return (
     <>
       <Header>
@@ -10,7 +10,7 @@ function Navigation({ input }) {
             <img src="/images/Foody Zone.svg" alt="" width="200px" />
           </div>
           <div>
-            <input type="text" onChange={input} />
+            <input type="text" onChange={input} placeholder="Search Food" />
           </div>
         </div>
         <div>
@@ -32,6 +32,12 @@ const Header = styled.div`
     display: flex;
     justify-content: space-between;
     align-items: center;
+
+    @media (0<width<600px) {
+      flex-direction: column;
+      justify-content: center;
+      gap: 10px;
+    }
   }
   .top input {
     font-size: 15px;

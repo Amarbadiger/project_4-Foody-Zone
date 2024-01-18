@@ -34,6 +34,8 @@ const FoodContainer = styled.section`
   height: calc(100vh - 200px);
 `;
 const FoodCards = styled.div`
+  /* width: 100vh; */
+
   color: white;
   display: flex;
   flex-wrap: wrap;
@@ -42,6 +44,11 @@ const FoodCards = styled.div`
   row-gap: 20px;
   column-gap: 32px;
   padding-top: 80px;
+
+  @media (0<width<600px) {
+    flex-direction: column;
+    flex-wrap: nowrap;
+  }
 `;
 const Foodcard = styled.div`
   width: 340px;

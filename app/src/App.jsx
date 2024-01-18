@@ -50,7 +50,7 @@ function App() {
   }
   return (
     <div>
-      <Navigation input={searchFiter}> </Navigation>
+      <Navigation input={searchFiter} btn={filterBtn}></Navigation>
       <FoodCardContainer>
         <Main data={filteredData}></Main>
       </FoodCardContainer>
@@ -63,4 +63,8 @@ const FoodCardContainer = styled.div`
   width: 100%;
   height: calc(100vh - 190px);
   background-size: cover;
+
+  @media (0<width<600px) {
+    background-image: none;
+  }
 `;
